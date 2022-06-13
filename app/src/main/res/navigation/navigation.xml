@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/todolistFragment">
+
+    <fragment
+        android:id="@+id/todolistFragment"
+        android:name="com.example.todoapplication.todolist.TodolistFragment"
+        android:label="fragment_todolist"
+        tools:layout="@layout/fragment_todolist" >
+        <action
+            android:id="@+id/action_todolistFragment_to_addNewTask"
+            app:destination="@id/addNewTask" />
+        <action
+            android:id="@+id/action_todolistFragment_to_removeTask"
+            app:destination="@id/removeTask" />
+        <action
+            android:id="@+id/action_todolistFragment_to_updateTask"
+            app:destination="@id/updateTask" />
+        <action
+            android:id="@+id/action_todolistFragment_self"
+            app:destination="@id/todolistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewTask"
+        android:name="com.example.todoapplication.add.AddNewTask"
+        android:label="fragment_add_new_task"
+        tools:layout="@layout/fragment_add_new_task" >
+        <action
+            android:id="@+id/action_addNewTask_to_todolistFragment"
+            app:destination="@id/todolistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeTask"
+        android:name="com.example.todoapplication.remove.RemoveTask"
+        android:label="fragment_remove_task"
+        tools:layout="@layout/fragment_remove_task" >
+        <action
+            android:id="@+id/action_removeTask_to_todolistFragment"
+            app:destination="@id/todolistFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.todoapplication.data.Task" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTask"
+        android:name="com.example.todoapplication.update.UpdateTask"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTask_to_todolistFragment"
+            app:destination="@id/todolistFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.todoapplication.data.Task" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskRow"
+        android:name="com.example.todoapplication.row.taskRow"
+        android:label="task_row"
+        tools:layout="@layout/task_row" >
+        <action
+            android:id="@+id/action_taskRow_to_addNewTask"
+            app:destination="@id/addNewTask" />
+        <action
+            android:id="@+id/action_taskRow_to_removeTask"
+            app:destination="@id/removeTask" />
+        <action
+            android:id="@+id/action_taskRow_to_updateTask"
+            app:destination="@id/updateTask" />
+    </fragment>
+</navigation>

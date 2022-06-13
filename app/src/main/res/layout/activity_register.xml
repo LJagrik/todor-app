@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.RegisterActivity">
+
+
+    <EditText
+        android:id="@+id/register1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register2"
+        android:layout_centerHorizontal="true"
+        android:hint="   PIN   "
+        android:inputType="numberPassword" />
+
+
+    <EditText
+        android:id="@+id/register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/registerButton"
+        android:layout_centerHorizontal="true"
+        android:hint="   REPEAT PIN   "
+        android:inputType="numberPassword" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="REGISTER"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        />
+
+
+</RelativeLayout>
