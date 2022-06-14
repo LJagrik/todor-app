@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
@@ -29,6 +30,8 @@ class UpdateTask : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_update_task, container, false)
 
@@ -38,6 +41,10 @@ class UpdateTask : Fragment() {
 
         view.editButton.setOnClickListener {
             updateTask()
+        }
+
+        view.buttonBackToTodolistFromEditingTask.setOnClickListener {
+            findNavController().navigate(R.id.action_updateTask_to_todolistFragment)
         }
 
         return view

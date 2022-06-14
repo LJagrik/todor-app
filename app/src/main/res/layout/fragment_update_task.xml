@@ -15,13 +15,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/linearLayoutInUpdateTask"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:background="@null"
         android:hint="Type here to edit task"
         android:maxHeight="100dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="30sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"/>
+        android:textSize="30sp" />
 
     <LinearLayout
         android:id="@+id/linearLayoutInUpdateTask"
@@ -31,7 +32,7 @@
 
         >
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonBackToTodolist"
+            android:id="@+id/buttonBackToTodolistFromEditingTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_orange_dark"

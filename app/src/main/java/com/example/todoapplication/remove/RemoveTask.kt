@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -30,6 +31,7 @@ class RemoveTask : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+       //(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         val view = inflater.inflate(R.layout.fragment_remove_task, container, false)
         mTaskViewModel = ViewModelProvider(this)[TaskViewModel::class.java]
@@ -38,7 +40,9 @@ class RemoveTask : Fragment() {
             deleteDataFromDatabase()
         }
 
-
+        view.buttonBackToTodolistFromDeletingTask.setOnClickListener {
+            findNavController().navigate(R.id.action_removeTask_to_todolistFragment)
+        }
 
         return view
     }

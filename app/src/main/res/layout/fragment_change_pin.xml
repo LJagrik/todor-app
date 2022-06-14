@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.PinChange"
+    >
+
+
+    <EditText
+        android:id="@+id/originalPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pinChange1"
+        android:layout_centerHorizontal="true"
+        android:hint="   ORIGINAL PIN   "
+        android:inputType="numberPassword"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/pinChange1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pinChange2"
+        android:layout_centerHorizontal="true"
+        android:hint="   NEW PIN   "
+        android:inputType="numberPassword"
+        android:textAlignment="center"/>
+
+
+    <EditText
+        android:id="@+id/pinChange2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:hint="   REPEAT  NEW PIN   "
+        android:inputType="numberPassword"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutInRemoveTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/pinChange2"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackFromPinChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="BACK"
+            android:textColor="@color/black"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/changePinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="CHANGE"
+            android:textColor="@color/black"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

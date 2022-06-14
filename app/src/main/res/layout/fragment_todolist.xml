@@ -17,7 +17,7 @@
         android:backgroundTint="@android:color/holo_orange_dark"
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="40dp"
  />
 
 
@@ -25,9 +25,9 @@
         android:id="@+id/tasksTodoRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_above="@id/addTask"
-        android:layout_marginBottom="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
