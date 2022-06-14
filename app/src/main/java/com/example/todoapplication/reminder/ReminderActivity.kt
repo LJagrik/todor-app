@@ -13,12 +13,27 @@ import com.example.todoapplication.reminder.service.AlarmService
 import kotlinx.android.synthetic.main.activity_reminder.*
 import java.util.*
 
+/**
+ * Class ReminderActivity
+ * ReminderActivity shows the correct layout for this activity.
+ *
+ * Class inherits from AppCompatActivity()
+ */
 class ReminderActivity : AppCompatActivity() {
 
     private lateinit var alarmService: AlarmService
     private lateinit var btn : ImageButton
     private lateinit var remindText: EditText
 
+    /**
+     * Function onCreate
+     * Shows the correct layout and listens if the user taps the button to switch
+     * between activities or if the user wants to add reminder.
+     * If the user press the button for adding reminder the DatePickerDialog
+     * and the TimePickerDialog will be shown.
+     *
+     * @param   savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reminder)
@@ -68,8 +83,6 @@ class ReminderActivity : AppCompatActivity() {
                 this.get(Calendar.YEAR),
                 this.get(Calendar.MONTH),
                 this.get(Calendar.DAY_OF_MONTH)).show()
-
         }
     }
-
 }

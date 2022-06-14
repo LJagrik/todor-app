@@ -6,6 +6,12 @@ import android.content.Intent
 import com.example.todoapplication.reminder.util.Constants
 import io.karn.notify.Notify
 
+/**
+ * Class AlarmReceiver
+ * AlarmReceiver shows the notification with custom text the user typed.
+ *
+ * Class inherits from BroadcastReceiver()
+ */
 class AlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {

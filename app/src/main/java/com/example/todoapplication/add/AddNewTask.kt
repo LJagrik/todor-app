@@ -16,28 +16,43 @@ import com.example.todoapplication.data.TaskViewModel
 import kotlinx.android.synthetic.main.fragment_add_new_task.*
 import kotlinx.android.synthetic.main.fragment_add_new_task.view.*
 
-
+/**
+ * Class AddNewTask is used for adding a new task logic
+ * and also adding task into the TaskViewModel
+ *
+ * Class inherits fun OnCreateView from Fragment()
+ */
 class AddNewTask : Fragment() {
 
     private lateinit var mTaskViewModel: TaskViewModel
+
+    /**
+     * Function onCreateView
+     * Inflates layout for adding a new task.
+     * It has ClickListener for button, so when user presses the add button,
+     * the task will be inserted into the database
+     *
+     * @param   inflater
+     * @param   savedInstanceState
+     * @return view
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val view = inflater.inflate(R.layout.fragment_add_new_task, container, false)
         mTaskViewModel = ViewModelProvider(this)[TaskViewModel::class.java]
-
-
 
         view.addButton.setOnClickListener {
             insertDataToDatabase()
         }
-
         return view
     }
 
-
+    /**
+     * Function insertDataToDatabase()
+     * adding Task attributes into the database
+     */
     private fun insertDataToDatabase() {
         val text = newTaskText.text.toString()
 
@@ -50,13 +65,16 @@ class AddNewTask : Fragment() {
         } else {
             Toast.makeText(requireContext(), "Fill out the task text!", Toast.LENGTH_LONG).show()
         }
-
     }
 
+    /**
+     * Function inputCheck
+     * Checks if the string isn't empty
+     *
+     * @param   taskText
+     * @return  true/false
+     */
     private fun inputCheck(taskText: String): Boolean {
         return !(TextUtils.isEmpty(taskText))
     }
-
-
-
 }

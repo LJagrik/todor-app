@@ -3,6 +3,9 @@ package com.example.todoapplication.data
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+/**
+ * Interface TaskDatabaseDao
+ */
 @Dao
 interface TaskDatabaseDao {
     @Insert

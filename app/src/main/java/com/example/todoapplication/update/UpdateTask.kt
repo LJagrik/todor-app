@@ -20,12 +20,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_update_task.*
 import kotlinx.android.synthetic.main.fragment_update_task.view.*
 
+/**
+ * Class TaskStatusUpdate is helping with updating Task text logic
+ * Class inherits from Fragment()
+ */
 class UpdateTask : Fragment() {
 
     private val args by navArgs<UpdateTaskArgs>()
 
     private lateinit var mTaskViewModel: TaskViewModel
 
+    /**
+     * Function onCreateView
+     * Inflates layout for task text update.
+     * Inflates the correct layout for the task text update.
+     * Implemeted logic for updating the task text
+     *
+     * @param   inflater
+     * @param   savedInstanceState
+     * @return view
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

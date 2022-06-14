@@ -12,11 +12,25 @@ import com.example.todoapplication.MainActivity
 import com.example.todoapplication.R
 import kotlinx.android.synthetic.main.activity_login.*
 
+/**
+ * Class LoginActivity
+ * LoginActivity shows layout for login and checks if the PIN user types is correct.
+ * If the PIN is correct the user will be brought to the MainActivity, if the PIN is
+ * incorrect the user will be notified. SharedPreferences are used for checking the PIN.
+ *
+ * Class inherits from AppCompatActivity()
+ */
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginPin : EditText
     private lateinit var preferences : SharedPreferences
 
+    /**
+     * Function onCreate
+     * Shows the correct layout and checks if the PIN is correct
+     *
+     * @param   savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 /**
- *
+ * Data Class Task
+ * It is the model of the entity in database
  */
 @Parcelize
 @Entity(tableName = "todo_tasks_table")

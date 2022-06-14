@@ -16,6 +16,15 @@ import com.example.todoapplication.R
 import com.example.todoapplication.reminder.ReminderActivity
 import kotlinx.android.synthetic.main.fragment_change_pin.*
 
+/**
+ * Class PinChange
+ * PinChange shows layout for changing the PIN and checks if the PIN user type is the same
+ * as an old PIN.
+ * If the PIN is correct user can type 2x the new PIN which
+ * must be the same both times. SharedPreferences are used for storing the PIN.
+ *
+ * Class inherits from AppCompatActivity()
+ */
 class PinChange : AppCompatActivity() {
 
     private lateinit var preferences : SharedPreferences
@@ -23,6 +32,12 @@ class PinChange : AppCompatActivity() {
     private lateinit var newPin2ET : EditText
     private lateinit var originalPinET : EditText
 
+    /**
+     * Function onCreate
+     * Shows the correct layout and checks if the old and new PIN are typed correctly.
+     *
+     * @param   savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_change_pin)

@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_todolistFragment_self"
             app:destination="@id/todolistFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.todoapplication.data.Task" />
+        <action
+            android:id="@+id/action_todolistFragment_to_taskStatusUpdate"
+            app:destination="@id/taskStatusUpdate" />
     </fragment>
     <fragment
         android:id="@+id/addNewTask"
@@ -70,5 +76,20 @@
         <action
             android:id="@+id/action_taskRow_to_updateTask"
             app:destination="@id/updateTask" />
+        <action
+            android:id="@+id/updateTaskStatus"
+            app:destination="@id/taskStatusUpdate" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskStatusUpdate"
+        android:name="com.example.todoapplication.update.TaskStatusUpdate"
+        android:label="task_status_update"
+        tools:layout="@layout/task_status_update" >
+        <action
+            android:id="@+id/action_taskStatusUpdate_to_todolistFragment"
+            app:destination="@id/todolistFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.todoapplication.data.Task" />
     </fragment>
 </navigation>

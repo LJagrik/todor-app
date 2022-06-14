@@ -9,13 +9,22 @@ import com.example.todoapplication.reminder.receiver.AlarmReceiver
 import com.example.todoapplication.reminder.util.Constants
 import com.example.todoapplication.reminder.util.RandomIntUtil
 
+/**
+ * Class AlarmService
+ * AlarmService implemets thelogic which allows user to set exact time
+ * in which the notification will trigger.
+ *
+ * @param context
+ */
 class AlarmService(private val context : Context) {
     private val alarmManager : AlarmManager? = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager?
-    //private val alarmReceiver : AlarmReceiver = AlarmReceiver()
-    //private val text: String = s
 
+    /**
+     * Function setExactAlarm
+     * Allows user to set exact time
+     * in which the notification will trigger.
+     */
     fun setExactAlarm(timeinMillis: Long, s: String) {
-
         setAlarm(
             timeinMillis,
             getPendingIntent(
@@ -27,8 +36,6 @@ class AlarmService(private val context : Context) {
             )
         )
     }
-
-
 
     private fun setAlarm(timeinMillis: Long, pendingIntent: PendingIntent) {
         alarmManager?.let {
@@ -49,5 +56,4 @@ class AlarmService(private val context : Context) {
     private fun getPendingIntent(intent: Intent) = PendingIntent.getBroadcast(
         context, RandomIntUtil.getRandomInt(), intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
     )
-
 }
