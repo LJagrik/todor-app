@@ -23,9 +23,10 @@
         android:id="@+id/setExact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SET EXACT ALARM"
+        android:text="SET ALARM"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reminderText"
         tools:layout_editor_absoluteY="235dp" />
 
 
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/tickyellow"
-            android:layout_marginVertical="50dp"/>
+            />
 
         <ImageButton
             android:id="@+id/btnReminderActivity"
@@ -52,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/timeyellow"
-            android:layout_marginVertical="50dp"/>
+            />
     </LinearLayout>
 
     <EditText
@@ -61,8 +62,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintTop_toBottomOf="@+id/setExact"
-        tools:layout_editor_absoluteX="46dp" />
+        android:hint="Type here your Remind"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

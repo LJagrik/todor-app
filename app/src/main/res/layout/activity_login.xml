@@ -14,7 +14,8 @@
         android:layout_above="@+id/loginButton"
         android:layout_centerHorizontal="true"
         android:hint="   PIN   "
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/loginButton"

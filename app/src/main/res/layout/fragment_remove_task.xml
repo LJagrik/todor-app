@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,36 +9,49 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-141dp" />
-
-    <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="70dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:text="DELETE"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonBackToTodolist"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@id/linearLayoutInRemoveTask"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textAlignment="center"
+        android:maxHeight="100dp"
+        android:text="Are you sure you want to delete the task?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/buttonBackToTodolist"
-        android:layout_width="wrap_content"
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutInRemoveTask"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="144dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:text="BACK"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        >
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/buttonBackToTodolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="BACK"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_marginEnd="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="DELETE"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            />
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

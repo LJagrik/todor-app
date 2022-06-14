@@ -14,7 +14,8 @@
         android:layout_above="@+id/register2"
         android:layout_centerHorizontal="true"
         android:hint="   PIN   "
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        android:textAlignment="center"/>
 
 
     <EditText
@@ -24,7 +25,8 @@
         android:layout_above="@+id/registerButton"
         android:layout_centerHorizontal="true"
         android:hint="   REPEAT PIN   "
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/registerButton"
