@@ -75,7 +75,7 @@ class TodolistAdapter: RecyclerView.Adapter<TodolistAdapter.MyViewHolder>() {
     }
 
     /**
-     * Updating task list at any time
+     * Updating task list
      *
      * @param task
      */

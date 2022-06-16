@@ -44,15 +44,18 @@ class ReminderActivity : AppCompatActivity() {
 
 
         btn.setOnClickListener {
-            val a = Intent(this, MainActivity::class.java)
-            startActivity(a)
+            backToMainActivity()
         }
 
         setExact.setOnClickListener {
             val text = remindText.text.toString()
             setAlarm {timeInMillis -> alarmService.setExactAlarm(timeInMillis, text)}
         }
+    }
 
+    private fun backToMainActivity() {
+        val a = Intent(this, MainActivity::class.java)
+        startActivity(a)
     }
 
     private fun setAlarm(callback: (Long) -> Unit) {
@@ -60,7 +63,7 @@ class ReminderActivity : AppCompatActivity() {
             this.set(Calendar.SECOND,0)
             this.set(Calendar.MILLISECOND,0)
             DatePickerDialog(this@ReminderActivity,0,
-                DatePickerDialog.OnDateSetListener {
+                {
                                 _, year, month, dayOfMonth ->
                     this.set(Calendar.YEAR,year)
                     this.set(Calendar.MONTH,month)
@@ -69,7 +72,7 @@ class ReminderActivity : AppCompatActivity() {
                     TimePickerDialog(
                         this@ReminderActivity,
                         0,
-                        TimePickerDialog.OnTimeSetListener {
+                        {
                                 _, hour, min ->
                             this.set(Calendar.HOUR_OF_DAY, hour)
                             this.set(Calendar.MINUTE, min)

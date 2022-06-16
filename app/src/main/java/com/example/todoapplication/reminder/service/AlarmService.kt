@@ -16,6 +16,7 @@ import com.example.todoapplication.reminder.util.RandomIntUtil
  *
  * @param context
  */
+// source which helped with this code is in Word documentation
 class AlarmService(private val context : Context) {
     private val alarmManager : AlarmManager? = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager?
 

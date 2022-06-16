@@ -63,7 +63,6 @@ class TodolistFragment : Fragment() {
             adapter.setData(user)
         })
 
-
         view.addTask.setOnClickListener {
             findNavController().navigate(R.id.action_todolistFragment_to_addNewTask)
         }
