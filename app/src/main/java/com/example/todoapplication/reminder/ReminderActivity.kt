@@ -58,6 +58,7 @@ class ReminderActivity : AppCompatActivity() {
         startActivity(a)
     }
 
+    // source which helped with this code is in Word documentation
     private fun setAlarm(callback: (Long) -> Unit) {
         Calendar.getInstance().apply {
             this.set(Calendar.SECOND,0)

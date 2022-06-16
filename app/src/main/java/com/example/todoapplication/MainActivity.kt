@@ -16,6 +16,8 @@ import com.example.todoapplication.reminder.ReminderActivity
  * activity without problems.
  *
  * Class inherits from AppCompatActivity()
+ *
+ * @author Lukas Jagrik
  */
 class MainActivity : AppCompatActivity() {
     private lateinit var btn : ImageButton
