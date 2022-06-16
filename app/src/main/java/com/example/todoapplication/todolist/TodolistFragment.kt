@@ -54,7 +54,6 @@ class TodolistFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        Toast.makeText(requireContext(), "Vosiel si do todolistu", Toast.LENGTH_SHORT).show()
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             //findNavController().navigate(R.id.fragment)
         }

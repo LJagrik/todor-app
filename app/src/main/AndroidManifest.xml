@@ -12,16 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApplication">
         <activity
-            android:name=".login.PinChange"
+            android:name=".login.PinChangeActivity"
             android:exported="false"
             android:label="@string/title_activity_pin_change"
             android:theme="@style/Theme.TodoApplication.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".login.ChangePin"
-            android:exported="false" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />

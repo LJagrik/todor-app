@@ -8,22 +8,20 @@
     tools:context=".reminder.ReminderActivity">
 
 
-
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/setExact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="SET ALARM"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/reminderText"
-        tools:layout_editor_absoluteY="235dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:textColor="@color/black"
-        app:strokeWidth="1dp"
         app:strokeColor="@color/black"
-        android:layout_centerInParent="true"/>
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteY="235dp" />
 
 
     <LinearLayout

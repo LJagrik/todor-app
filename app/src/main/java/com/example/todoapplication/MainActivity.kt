@@ -6,10 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.todoapplication.login.PinChange
+import com.example.todoapplication.login.PinChangeActivity
 import com.example.todoapplication.reminder.ReminderActivity
 
 /**
@@ -49,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.pin_change) {
-            val b = Intent(this, PinChange::class.java)
+            val b = Intent(this, PinChangeActivity::class.java)
             startActivity(b)
         } else {
             return super.onOptionsItemSelected(item)

@@ -25,7 +25,7 @@
         android:layout_centerInParent="true"
         android:text="LOGIN"
         android:textColor="@color/black"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@android:color/holo_green_dark"
         app:strokeColor="@color/black"
         app:strokeWidth="1dp"
         />

@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.fragment_change_pin.*
  *
  * Class inherits from AppCompatActivity()
  */
-class PinChange : AppCompatActivity() {
+class PinChangeActivity : AppCompatActivity() {
 
     private lateinit var preferences : SharedPreferences
     private lateinit var newPin1ET : EditText
