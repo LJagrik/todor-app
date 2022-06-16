@@ -1,0 +1,17 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.todoapplication.data/TaskDatabase.Companion///PointingToDeclaration/com/example/todoapplication/data/TaskDatabase.Companion.html
+$dokka.location:com.example.todoapplication.todolist/TodolistAdapter.MyViewHolder///PointingToDeclaration/com/example/todoapplication/todolist/TodolistAdapter.MyViewHolder.html
+com.example.todoapplication
+com.example.todoapplication.add
+com.example.todoapplication.data
+com.example.todoapplication.login
+com.example.todoapplication.register
+com.example.todoapplication.reminder
+com.example.todoapplication.reminder.receiver
+com.example.todoapplication.reminder.service
+com.example.todoapplication.reminder.util
+com.example.todoapplication.remove
+com.example.todoapplication.todolist
+com.example.todoapplication.update
+
