@@ -60,7 +60,6 @@ class UpdateTask : Fragment() {
         view.buttonBackToTodolistFromEditingTask.setOnClickListener {
             findNavController().navigate(R.id.action_updateTask_to_todolistFragment)
         }
-
         return view
     }
 
